@@ -1,0 +1,35 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bluemix-node-starter",
+		"_postman_id": "735a9c45-7fed-7a60-7523-ec605425364d",
+		"description": "POSTMAN collection for the bluemix node starter topcoder challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{URL}}:{{PORT}}/api/test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response code is valid\"] = (responseCode.code === 200 || responseCode.code === 304);",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Response JSON for test is correct\"] = jsonData.success === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "{{URL}}/api/test",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

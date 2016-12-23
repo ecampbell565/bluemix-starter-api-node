@@ -1,0 +1,8 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: ecampbell565-bluemix-node-starter
+  host: ecampbell565-bluemix-node-starter
+  disk_quota: 1024M

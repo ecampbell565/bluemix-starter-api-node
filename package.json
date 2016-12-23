@@ -1,0 +1,34 @@
+{
+  "name": "bluemix-node-starter",
+  "version": "1.0.0",
+  "description": "Node shell project to be deployed on IBM Bluemix",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/newman run bluemix-node-starter.postman_collection.json -e bluemix-node-starter.postman_environment.json",
+    "start": "node app.js",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cfenv": "^1.0.3",
+    "co": "^4.6.0",
+    "config": "^1.24.0",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "http-status": "^0.2.3",
+    "lodash": "^4.17.2",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.12.2",
+    "eslint-config-topcoder": "^1.8.0",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-react": "^6.8.0",
+    "newman": "^3.3.1"
+  },
+  "engines": {
+    "node": "4.x"
+  }
+}

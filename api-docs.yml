@@ -1,0 +1,43 @@
+swagger: '2.0'
+info:
+  title: Bluemix Node Starter API
+  description: Basic node application with one test endpoint
+  version: "0.0.0"
+
+host: api.uber.com
+schemes:
+  - http
+basePath: /api
+produces:
+  - application/json
+paths:
+  /test:
+    get:
+      summary: Test endpoint
+      description: Returns a test json object
+      tags:
+        - Test
+      responses:
+        304:
+          description: A json test object
+          schema:
+            $ref: '#/definitions/Test'
+        404:
+          description: Route not found
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Test:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: Test endpoint
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
