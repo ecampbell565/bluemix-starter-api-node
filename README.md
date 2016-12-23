@@ -1,5 +1,4 @@
-# Project Title
-IBM Bluemix Node Starter API
+# IBM Bluemix Node Starter API
 
 ### Description
 Basic node application to be deployed on IBM Bluemix
@@ -32,6 +31,7 @@ $ bluemix login -u [USER] -o [ORG] -s [SPACE]
 Create an app using the Node SDK with Cloud Foundry
 
 Navigate to the root directory of the submission
+
 Deploy the source to the created app using the cf push command
 ```sh
 $ cf push [APP_NAME]

@@ -15,6 +15,7 @@ const router = express.Router();
 app.set('port', config.PORT);
 app.set('host', config.HOST);
 
+//Load routes
 _.forEach(require('./routes'), (verbs, url) => {
   _.forEach(verbs, (def, verb) => {
     const actions = [
